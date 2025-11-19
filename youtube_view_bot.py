@@ -131,10 +131,10 @@ class YouTubeViewBotGUI:
         
         try:
             threads = int(self.threads_var.get())
-            if threads < 1 or threads > 20:
+            if threads < 1:
                 raise ValueError
         except ValueError:
-            messagebox.showerror("Error", "Số luồng phải từ 1-20")
+            messagebox.showerror("Error", "Số luồng phải >= 1")
             return False
         
         try:
